@@ -38,8 +38,11 @@ function CreateHomeModule() {
 
         // home elements
         const firstElement = homeFactory.createDivElement("first");
+        firstElement.textContent = "PRIMERA PAG INTRODUCCION";
         const secondElement = homeFactory.createDivElement("second");
+        secondElement.textContent = "PRIMERA PAG CONTENIDO";
         const thirdElement = homeFactory.createDivElement("third");
+        thirdElement.textContent = "PRIMERA PAG FOOT";
         homeFactory.appendChildToElement(homeElement,firstElement);
         homeFactory.appendChildToElement(homeElement,secondElement);
         homeFactory.appendChildToElement(homeElement,thirdElement);

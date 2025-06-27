@@ -6,7 +6,16 @@ body {
 }
 
 .home {
-    background-color: blue;
+    background-color: rgb(32, 201, 88);
+    width: 300px;
+    height: 300px;
+
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr;
+}
+
+.contact {
+    background-color: rgb(201, 32, 178);
     width: 300px;
     height: 300px;
 
