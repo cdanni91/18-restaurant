@@ -1,9 +1,14 @@
 body {
     background-color: rgb(110, 103, 103);
+
+    display: grid;
+    
 }
 
 .home {
     background-color: blue;
+    width: 300px;
+    height: 300px;
 
     display: grid;
     grid-template-rows: 1fr 2fr 1fr;
