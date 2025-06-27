@@ -11,12 +11,12 @@ function CreateHomeModule() {
         console.log(content);
     }
 
-    function createMainElement() {
+    function createHomeElement() {
 
-        const mainElement = document.createElement("div");
-        mainElement.classList.add("home");
+        const homeElement = document.createElement("div");
+        homeElement.classList.add("home");
 
-        return mainElement
+        return homeElement
     }
 
     function appendElementToContent(child) {
@@ -26,14 +26,16 @@ function CreateHomeModule() {
 
 
 
+
+
     return {logContent,
-            createMainElement,
+            createHomeElement,
             appendElementToContent}
 }
 
 
 const home = CreateHomeModule();
-const mainElement = home.createMainElement();
-home.logContent(mainElement);
-home.appendElementToContent(mainElement);
+const homeElement = home.createHomeElement();
+home.logContent(homeElement);
+home.appendElementToContent(homeElement);
 

@@ -1,3 +1,10 @@
 body {
     background-color: rgb(110, 103, 103);
 }
+
+.home {
+    background-color: blue;
+
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr;
+}
