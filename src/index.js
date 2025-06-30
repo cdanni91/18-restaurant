@@ -8,6 +8,13 @@ import {CreateContactModule} from "./contact"
 
 const homeButton = document.querySelector("#homeButton");
 
+// landing
+const landing = CreateHomeModule();
+landing.executeHome();
+
+
+
+// buttons
 homeButton.addEventListener("click", () => {
 
     const homeFactory = CreateHomeModule();

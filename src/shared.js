@@ -22,8 +22,27 @@ function FunctionFactory() {
         element.appendChild(child);
     }
 
-    function removeElementHTML (element) {
+    function removeElementHTML(element) {
         element.innerHTML = "";
+    }
+
+    function createElementsFromArray(array,parentElement) {
+
+        for (let i=0; i < array.length; i++) {
+
+            const tagName = array[i][0];       // e.g., "div"
+            const className = array[i][1];      // e.g., "title"
+            let variableName = array[i][2];   // e.g., "titleElement"
+            const innerText = array[i][3];    // e.g., "emanuelito0o0oo cocina para los pibes"
+            
+            const newElement = createElement(tagName, className);
+            newElement.textContent = innerText;
+
+            variableName = newElement;
+            
+            appendChildToElement(parentElement,variableName);
+        }
+
     }
 
     return {
@@ -31,7 +50,8 @@ function FunctionFactory() {
         getElement,
         createElement,
         appendChildToElement,
-        removeElementHTML
+        removeElementHTML,
+        createElementsFromArray
     }
 
 }
