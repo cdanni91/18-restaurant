@@ -2,27 +2,24 @@ import { FunctionFactory } from "./shared";
 
 function CreateContactModule() {
 
-    function executeContact() {
+    const contactFactory = FunctionFactory();
+    const contentElement = contactFactory.getElement(".content");
+    const contactElement = contactFactory.createElement("div","contact");
+    
 
-        const contactFactory = FunctionFactory();
-        const contentElement = contactFactory.getElement(".content");
-        contactFactory.removeElementHTML(contentElement);
+    const contactElements = [   ["div","title","titleElement","Ponete en contacto con Emanuelito's"], 
+                                ["div","description", "descriptionElement","Whatsapp: 034423434"], 
+                                ["div","hours","hoursElement","Lunes a Viernes: 09:00 a 18:00"]
+                        ]
+
         
-        const contactElement = contactFactory.createElement("div","contact");
+
+    function executeContact() {
+        // create the home element and append the home element
+        contactFactory.removeElementHTML(contentElement);
         contactFactory.appendChildToElement(contentElement,contactElement);
-
-
-        // contact elements
-        const firstElement = contactFactory.createElement("div","first");
-        firstElement.textContent = "PRIMERA PAG INTRODUCCION";
-        const secondElement = contactFactory.createElement("div","second");
-        secondElement.textContent = "PRIMERA PAG CONTENIDO";
-        const thirdElement = contactFactory.createElement("div","third");
-        thirdElement.textContent = "PRIMERA PAG FOOT";
-        contactFactory.appendChildToElement(contactElement,firstElement);
-        contactFactory.appendChildToElement(contactElement,secondElement);
-        contactFactory.appendChildToElement(contactElement,thirdElement);
-
+        // home elements
+        contactFactory.createElementsFromArray(contactElements, contactElement);
     }
 
 
