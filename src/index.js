@@ -3,12 +3,16 @@ import "./styles.css";
 
 import {CreateHomeModule} from "./home"
 import {CreateContactModule} from "./contact"
+import {CreateAboutModule} from "./about";
 
 
 
 const homeButton = document.querySelector("#homeButton");
+const contactButton = document.querySelector("#contactButton");
+const aboutButton = document.querySelector("#aboutButton");
 
-// landing
+
+// landing render
 const landing = CreateHomeModule();
 landing.executeHome();
 
@@ -22,20 +26,15 @@ homeButton.addEventListener("click", () => {
 
 })
 
-const contactButton = document.querySelector("#contactButton");
 
 contactButton.addEventListener("click",() => {
-
     const contactFactory = CreateContactModule();
     contactFactory.executeContact();
 })
 
 
-const aboutButton = document.querySelector("#aboutButton");
 
 aboutButton.addEventListener("click",() => {
-
-    const factory = CreateHomeModule();
-    
-
+    const aboutFactory = CreateAboutModule();
+    aboutFactory.executeAbout();
 })
