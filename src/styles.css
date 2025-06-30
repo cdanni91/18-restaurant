@@ -54,6 +54,16 @@ body {
             background-size: 100%;
         }
 
+        .contact {
+            background-image: url(./imgs/pizza-4968645_1280.jpg) ;
+            background-size: 100%;
+        }
+
+        .about {
+            background-image: url(./imgs/depositphotos_217981402-stock-photo-set-pizza-black-wooden-background.jpg) ;
+            background-size: 100%;
+        }
+
         .home,
         .contact,
         .about {
