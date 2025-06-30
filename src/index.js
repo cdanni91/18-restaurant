@@ -5,6 +5,7 @@ import {CreateHomeModule} from "./home"
 import {CreateContactModule} from "./contact"
 
 
+
 const homeButton = document.querySelector("#homeButton");
 
 homeButton.addEventListener("click", () => {
@@ -27,6 +28,7 @@ const aboutButton = document.querySelector("#aboutButton");
 
 aboutButton.addEventListener("click",() => {
 
-    const content = document.querySelector(".content");
-    content.innerHTML = "";
+    const factory = CreateHomeModule();
+    
+
 })

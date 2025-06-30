@@ -1,47 +1,23 @@
+import { FunctionFactory } from "./shared";
+
 function CreateContactModule() {
-
-
-    function logContent(content) {
-
-        console.log(content);
-    }
-
-    function getElement(querySelector) {
-
-        const element = document.querySelector(querySelector);
-
-        return element;
-
-    }
-
-    function createDivElement(elementName) {
-
-        const newElement = document.createElement("div");
-        newElement.classList.add(elementName);
-
-        return newElement;
-    }
-
-    function appendChildToElement(element,child) {
-        element.appendChild(child);
-    }
-
 
     function executeContact() {
 
-        const contactFactory = CreateContactModule();
+        const contactFactory = FunctionFactory();
         const contentElement = contactFactory.getElement(".content");
-        contactFactory.logContent(contentElement);
-        const contactElement = contactFactory.createDivElement("contact");
+        contactFactory.removeElementHTML(contentElement);
+        
+        const contactElement = contactFactory.createElement("div","contact");
         contactFactory.appendChildToElement(contentElement,contactElement);
 
 
-        // home elements
-        const firstElement = contactFactory.createDivElement("first");
+        // contact elements
+        const firstElement = contactFactory.createElement("div","first");
         firstElement.textContent = "PRIMERA PAG INTRODUCCION";
-        const secondElement = contactFactory.createDivElement("second");
+        const secondElement = contactFactory.createElement("div","second");
         secondElement.textContent = "PRIMERA PAG CONTENIDO";
-        const thirdElement = contactFactory.createDivElement("third");
+        const thirdElement = contactFactory.createElement("div","third");
         thirdElement.textContent = "PRIMERA PAG FOOT";
         contactFactory.appendChildToElement(contactElement,firstElement);
         contactFactory.appendChildToElement(contactElement,secondElement);
@@ -51,11 +27,7 @@ function CreateContactModule() {
 
 
 
-    return {logContent,
-            createDivElement,
-            getElement,
-            appendChildToElement,
-            executeContact}
+    return {executeContact}
 }
 
 export {CreateContactModule}

@@ -1,24 +1,46 @@
 body {
     background-color: rgb(110, 103, 103);
-
+    
     display: grid;
     
 }
 
-.home {
-    background-color: rgb(32, 201, 88);
-    width: 300px;
-    height: 300px;
 
-    display: grid;
-    grid-template-rows: 1fr 2fr 1fr;
+header 
+
+    nav {
+
+        display: flex;
+        justify-content: space-evenly;
+
+    }
+
+.content {
+
+    display: flex;
+    justify-content: center;
+
 }
 
-.contact {
-    background-color: rgb(201, 32, 178);
-    width: 300px;
-    height: 300px;
+    .home,.contact {
+        background-color: rgb(32, 201, 88);
+        width: 80vw;
+        height: 90vh;
+        border-radius: 40px;
 
-    display: grid;
-    grid-template-rows: 1fr 2fr 1fr;
-}
+        display: grid;
+        grid-template-rows: 1fr 2fr 1fr;
+    }
+
+        .first,
+        .second,
+        .third {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+    .contact {
+        background-color: brown;
+    }
